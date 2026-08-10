@@ -1,0 +1,317 @@
+/* ===================================================================
+   Riverbend Yoga Studio — styles.css
+   Touchstone 3: Visual Design & Responsive Layout
+
+   Palette (4 colors):
+     --color-primary   deep sage green   — brand, headers, nav
+     --color-secondary terracotta        — accents, buttons, links
+     --color-bg         warm cream       — page background
+     --color-text        warm charcoal   — body copy
+
+   Type (2 families):
+     Headings: 'Fraunces' (serif)     — calm, organic, editorial
+     Body:     'Nunito Sans' (sans)   — friendly, highly readable
+   =================================================================== */
+
+:root {
+  --color-primary: #3f6552;
+  --color-primary-dark: #2e4c3d;
+  --color-secondary: #c97b58;
+  --color-secondary-dark: #a8603f;
+  --color-bg: #fbf6ef;
+  --color-surface: #ffffff;
+  --color-text: #2b2620;
+  --color-text-muted: #5a5347;
+  --color-border: #e4dccb;
+
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Nunito Sans', -apple-system, Segoe UI, Roboto, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+
+  --radius: 10px;
+  --max-width: 960px;
+}
+
+/* -------------------- Reset / base -------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  color: var(--color-secondary-dark);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-primary-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* -------------------- Typography -------------------- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: var(--space-xs);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+  max-width: 65ch;
+}
+
+/* -------------------- Layout shell -------------------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+/* -------------------- Header & nav (mobile-first) -------------------- */
+header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+header .brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+header nav a {
+  color: #f4ede1;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  color: #fff;
+  border-bottom-color: var(--color-secondary);
+  outline: none;
+}
+
+/* current page indicator (add class="active" to the matching nav link) */
+header nav a.active {
+  border-bottom-color: var(--color-secondary);
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+  background-color: var(--color-primary-dark);
+  color: #ece6da;
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  max-width: none;
+}
+
+/* -------------------- Lists inside sections -------------------- */
+main ul {
+  padding-left: 1.25rem;
+}
+
+main li {
+  margin-bottom: 0.4rem;
+}
+
+/* -------------------- Figures & captions -------------------- */
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+  font-style: italic;
+}
+
+/* -------------------- Video -------------------- */
+video {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+/* -------------------- Forms -------------------- */
+form fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+form legend {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  padding: 0 0.5rem;
+}
+
+form p {
+  max-width: none;
+  margin-bottom: var(--space-sm);
+}
+
+label,
+form span {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+input[type="radio"] {
+  margin-right: 0.3rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+  background-color: var(--color-secondary-dark);
+}
+
+/* -------------------- Larger screens -------------------- */
+@media (min-width: 800px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  main {
+    padding: var(--space-lg);
+  }
+
+  /* two-column layout for image + text sections */
+  section.media-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  section.media-row img,
+  section.media-row figure {
+    flex: 0 0 40%;
+  }
+
+  section.media-row .media-row-text {
+    flex: 1;
+  }
+}
