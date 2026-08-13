@@ -281,6 +281,129 @@ button[type="submit"]:focus-visible {
   background-color: var(--color-secondary-dark);
 }
 
+/* -------------------- Touchstone 4: interactivity -------------------- */
+
+/* Class Types list with an "Add to My Interests" button per item */
+ul.class-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.class-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+ul.class-list li:last-child {
+  border-bottom: none;
+}
+
+.class-info {
+  flex: 1 1 260px;
+}
+
+.add-interest-btn {
+  flex: 0 0 auto;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-interest-btn:hover,
+.add-interest-btn:focus-visible {
+  background-color: var(--color-primary-dark);
+}
+
+.add-interest-btn.is-saved,
+.add-interest-btn:disabled {
+  background-color: var(--color-text-muted);
+  cursor: default;
+}
+
+/* My Saved Classes panel */
+#saved-interests-section ul.saved-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.saved-interest-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.remove-interest-btn {
+  background: none;
+  border: 1px solid var(--color-secondary-dark);
+  color: var(--color-secondary-dark);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove-interest-btn:hover,
+.remove-interest-btn:focus-visible {
+  background-color: var(--color-secondary-dark);
+  color: #fff;
+}
+
+#saved-interests-empty {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.saved-hint {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Returning-visitor banner on events.html */
+.returning-banner {
+  background-color: #eef4ee;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  font-weight: 600;
+  max-width: none;
+}
+
+/* Inline form validation feedback */
+.field-error {
+  display: block;
+  color: #a3342a;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: #a3342a;
+  outline: 2px solid #a3342a33;
+}
+
 /* -------------------- Larger screens -------------------- */
 @media (min-width: 800px) {
   header {

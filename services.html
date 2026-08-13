@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riverbend Yoga Studio - Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+<p class="brand">Riverbend Yoga Studio</p>
+<nav aria-label="Primary navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html" class="active">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h1>Our Classes &amp; Services</h1>
+
+<section>
+<h2>Class Types</h2>
+<p>Found a class you'd like to try? Save it to your list and we'll remember it for you &mdash; even if you leave and come back later.</p>
+<ul class="class-list">
+<li>
+<div class="class-info"><strong>Gentle:</strong> Slow-paced movement and breathing, ideal for beginners and older adults.</div>
+<button type="button" class="add-interest-btn" data-class-id="gentle" data-class-name="Gentle Flow">Add to My Interests</button>
+</li>
+<li>
+<div class="class-info"><strong>Vinyasa:</strong> Flowing, breath-linked sequences for a moderate to challenging workout.</div>
+<button type="button" class="add-interest-btn" data-class-id="vinyasa" data-class-name="Vinyasa">Add to My Interests</button>
+</li>
+<li>
+<div class="class-info"><strong>Restorative:</strong> Deeply relaxing poses held with support, focused on stress relief.</div>
+<button type="button" class="add-interest-btn" data-class-id="restorative" data-class-name="Restorative">Add to My Interests</button>
+</li>
+</ul>
+</section>
+
+<section id="saved-interests-section">
+<h2>My Saved Classes</h2>
+<p id="saved-interests-empty">You haven't saved any classes yet. Use the &ldquo;Add to My Interests&rdquo; buttons to build your list.</p>
+<ul id="saved-interests-list" class="saved-list"></ul>
+<p class="saved-hint">Head to the <a href="events.html">Events page</a> when you're ready &mdash; we'll pre-select your most recent pick on the request form.</p>
+</section>
+
+<section>
+<h2>Private Sessions</h2>
+<p>One-on-one sessions are available for students who want personalized attention, are working around an injury, or prefer a quieter setting. Sessions can be booked in-studio or, weather permitting, outdoors along the river path.</p>
+</section>
+
+<section>
+<h2>Pricing Overview</h2>
+<p>Drop-in classes generally range from $18 to $24. Monthly unlimited memberships range from $95 to $130. Private sessions are priced separately. Contact us for current rates; online checkout is not available.</p>
+</section>
+
+<section class="media-row">
+<figure>
+<img src="media/yoga-workshop.jpg" alt="Group of students stretching together during a guided workshop">
+<figcaption>Our monthly restorative workshop draws students of all levels for a slower, deeply mindful practice.</figcaption>
+</figure>
+<div class="media-row-text">
+<h2>Monthly Workshop Spotlight</h2>
+<p>Join us for a guided, unhurried session designed to help you unwind and reconnect — no experience necessary.</p>
+<button type="button" class="add-interest-btn" data-class-id="workshop" data-class-name="Monthly Workshop">Add to My Interests</button>
+</div>
+</section>
+
+<section>
+<h2>Featured Class Preview</h2>
+<picture>
+<source media="(min-width: 800px)" srcset="media/yoga-feature-large.jpg">
+<source media="(max-width: 799px)" srcset="media/yoga-feature-small.jpg">
+<img src="media/yoga-feature-large.jpg" alt="Instructor demonstrating a supported restorative pose during class">
+</picture>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 Riverbend Yoga Studio. 214 Willow Creek Lane, Riverbend.</p>
+</footer>
+</body>
+</html>

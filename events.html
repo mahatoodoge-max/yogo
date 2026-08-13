@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riverbend Yoga Studio - Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+<p class="brand">Riverbend Yoga Studio</p>
+<nav aria-label="Primary navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html" class="active">Events</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h1>Upcoming Events &amp; Workshops</h1>
+
+<section>
+<h2>This Month's Workshops</h2>
+<ul>
+<li>August 9 - Restorative Workshop, 2:00-3:30 PM</li>
+<li>August 16 - Beginner's Breathwork Intro, 10:00-11:00 AM</li>
+<li>August 23 - Riverside Sunset Flow (outdoors, weather permitting), 6:30-7:30 PM</li>
+<li>August 30 - Community Donation Class, 9:00-10:00 AM</li>
+</ul>
+</section>
+
+<section>
+<h2>Request a Spot</h2>
+<p>Fill out the form below and we'll follow up with availability and any details you need.</p>
+<p id="returning-visitor-banner" class="returning-banner" hidden></p>
+<form id="interest-form" action="#" method="post" novalidate>
+<fieldset>
+<legend>Interest Form</legend>
+
+<p>
+<label for="name">Full Name</label><br>
+<input type="text" id="name" name="name" required minlength="2">
+<span id="name-error" class="field-error" role="alert" hidden></span>
+</p>
+
+<p>
+<label for="email">Email Address</label><br>
+<input type="email" id="email" name="email" required>
+<span id="email-error" class="field-error" role="alert" hidden></span>
+</p>
+
+<p>
+<label for="interest">Class or Event Interest</label><br>
+<select id="interest" name="interest" required>
+<option value="">Select an option</option>
+<option value="gentle">Gentle Flow</option>
+<option value="vinyasa">Vinyasa</option>
+<option value="restorative">Restorative</option>
+<option value="workshop">Monthly Workshop</option>
+<option value="private">Private Session</option>
+</select>
+<span id="interest-error" class="field-error" role="alert" hidden></span>
+</p>
+
+<p>
+<label for="experience">Experience Level</label><br>
+<select id="experience" name="experience" required>
+<option value="">Select an option</option>
+<option value="beginner">Beginner</option>
+<option value="intermediate">Intermediate</option>
+<option value="advanced">Advanced</option>
+</select>
+</p>
+
+<p>
+<span>Preferred Contact Method</span><br>
+<input type="radio" id="contact-email" name="contact-method" value="email" required>
+<label for="contact-email">Email</label>
+<input type="radio" id="contact-phone" name="contact-method" value="phone">
+<label for="contact-phone">Phone</label>
+</p>
+
+<p>
+<label for="message">Message</label><br>
+<textarea id="message" name="message" rows="4" maxlength="500" placeholder="Tell us anything else we should know"></textarea>
+</p>
+
+<p>
+<button type="submit">Submit Request</button>
+</p>
+</fieldset>
+</form>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 Riverbend Yoga Studio. 214 Willow Creek Lane, Riverbend.</p>
+</footer>
+</body>
+</html>
